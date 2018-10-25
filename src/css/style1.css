@@ -31,11 +31,17 @@ header {
 	color:#ffffff;
 	bottom: 0;
 	width: 100%;
+	z-index: 90;
 }
 
 
 #cookie{
 	padding-top: 15px;
+}
+
+.content {
+	margin-left: 3%;
+	margin-right: 3%;
 }
 /*
 div#titolo {
@@ -67,9 +73,9 @@ div#titolo {
 
 	}
 
-	#img1 {
-		width: 300px;
-		height: 250px;
+	#img {
+		width: 100%;
+		height: 300px;
 	}
 
 	div.paragraph2 {
@@ -77,11 +83,7 @@ div#titolo {
 		/*width: 32%;*/
 	}
 
-	#img2 {
-		
-		width: 300px;
-		height: 250px;
-	}
+	
 
 	div.paragraph3 {
 		display: inline-block;
@@ -89,20 +91,12 @@ div#titolo {
 	}
 
 
-	#img3 {
-		width: 300px;
-		height: 250px;
-	}
+	
 
 	div.paragraph4 {
 		/*margin-left: 40px;*/
 		display: inline-block;
 		/*width: 32%;*/
-	}
-
-	#img4 {
-		width: 300px;
-		height: 250px;
 	}
 
 	span.tech {
@@ -115,6 +109,12 @@ div#titolo {
 	border-radius: 5px;
 
 	}
+
+.like{
+	background-color: white;
+	color: black;
+}
+
 /*
 	span.like {
 		padding: 15px, 15px;
@@ -162,4 +162,8 @@ div#titolo {
 	.paragraph4:nth(3) {
 		float: left;
 		clear: both;
+	}
+
+	.foot {
+		margin-bottom: 5%;
 	}
