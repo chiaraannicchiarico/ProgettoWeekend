@@ -1,5 +1,22 @@
 const $ = require('jquery');   
 
+
+
+$(document).ready(function(){
+            $.ajax ({
+              url: 'data.json',
+              type: 'GET',
+              dataType: 'json',
+              success: function(risposta){
+                for(var i = 0; i < risposta.length; i++)
+              $("#another_article").append(risposta[i].text);
+              }, 
+              error: function(){
+                console.log('error'); 
+              }
+            });
+          
+});
 /*var element = document.getElementById('here');
 
 
@@ -17,11 +34,11 @@ element.addEventListener("click",closeCookie);*/
 
 
 $('#here').on('click', () => {
-  $('#cookie_d').hide();
+  $('#cookie_d').hide(); 
 });
 
 
-	
+
 
    /* var elements=document.getElementsByClassName('like');
 
@@ -36,9 +53,23 @@ $('#here').on('click', () => {
     		this.style.color="white";
     	}
      });
-     }	*/
+   }	*/
 
-$('.like').on('click', event => {
-	$(event.currentTarget).toggleClass("green-like");
-})
 
+
+   $('.like').on('click', event => {
+     $('.like').toggleClass("green-like");
+   })
+
+/*function myFunction() {
+var element = document.getElementClassName('like');
+element.classList.toggle("red");
+}
+
+$(selector).toggleClass('like',myFunction(index,currentclass),switch*/
+
+
+
+/*$(".like").click(function(){
+  $(".like").toggleClass("green-like");
+});*/
