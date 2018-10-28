@@ -1,4 +1,4 @@
-[{
+/*[{
 	"text": "Hello Word 1"
 },
 {
@@ -9,4 +9,58 @@
 },
 {	
 	"text":"Hello Word 4"
+}]*/
+
+
+
+[{
+    "text":"Article Title 1"
+},
+{
+    "text": "http://www.vocidicitta.it/wp-content/uploads/2016/08/internet_web-1140x641.jpg"
+},
+{
+    "text":"tech"
+},
+{
+   "text":"Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod seper. Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." 
+},
+{
+    "text":"Article Title 2"
+},
+{
+    "text":"https://img2.tgcom24.mediaset.it/binary/articolo/istockphoto/52.$plit/C_2_articolo_3074555_upiImagepp.jpg"
+},
+{
+    "text":"tech"
+},
+{
+   "text":"Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod seper. Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." 
+},
+{
+    "text":"Article Title 3"
+},
+{
+    "text":"https://www.bitmat.it/wp-content/uploads/2017/10/Technology.jpg"
+},
+{
+    "text":"tech"
+},
+{
+   "text":"Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod seper. Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." 
+},
+{
+    "text":"Article Title 4"
+},
+{
+    "text":"https://www.noisiamofuturo.it/wp-content/uploads/2018/05/destaque-curso-tecnologia-em-analise-e-desenvolvimento.jpg"
+},
+{
+    "text":"tech"
+},
+{
+   "text":"Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod seper. Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." 
 }]
+
+
+  

@@ -1,23 +1,34 @@
+@color1: #ffffff;
+@color2: #000000;
+@color3: #e0ffff;
+@px1: 15px;
+@px2: 40px;
+@px3: 50px;
+
 header {
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 40px;
-color: #ffffff; 
-background-color: 	#000000; 
+padding-top: @px1;
+padding-bottom: @px1;
+padding-left: @px2;
+color: @color1; 
+background-color: 	@color2; 
 
 }
 
 
 .jumbotron {
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 40px;
-color: #ffffff;
-background-color: 	#000000; 
+padding-top: @px1;
+padding-bottom: @px1;
+padding-left: 4@px2;
+color: @color1;
+background-color: 	@color2; 
 
 }
 
-
+.btn-light2{
+	color: #fff;
+	background-color: #449d44;
+	border-color: #398439;
+}
 
 #text {
 width: 32%;   
@@ -25,11 +36,11 @@ width: 32%;
 }
 
 #cookie_d {
-padding-left: 50px;
-padding-bottom: 15px;
+padding-left: @px3;
+padding-bottom: @px1;
 position: fixed;
-background-color:#000000;
-color:#ffffff;
+background-color:@color2;
+color:@color1;
 bottom: 0;
 width: 100%;
 z-index: 90;
@@ -37,7 +48,7 @@ z-index: 90;
 
 
 #cookie{
-padding-top: 15px;
+padding-top: @px1;
 }
 
 .content {
@@ -46,11 +57,11 @@ margin-right: 3%;
 }
 
 div#titolo {
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 40px;
-color: #000000;
-background-color: 	#e0ffff;
+padding-top: @px1;
+padding-bottom: @px1;
+padding-left: @px2;
+color: @color2;
+background-color: @color3;
 }
 
 

@@ -32,13 +32,16 @@ header {
   margin-left: 3%;
   margin-right: 3%;
 }
-div#titolo {
+#titolo {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 40px;
   color: #000000;
   background-color: #e0ffff;
 }
+
+
+
 #button1 {
   width: 35px;
   height: 30px;
@@ -113,9 +116,7 @@ footer {
   padding-top: 50px;
   margin-bottom: 50px;
 }
-.jumbotron {
-  padding: 0 50px;
-}
+
 .paragraph4:nth(3) {
   float: left;
   clear: both;
@@ -123,9 +124,13 @@ footer {
 .foot {
   margin-bottom: 5%;
 }
-.green-like {
-  background-color: green;
+
+.btn-light2{
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
 }
-.white-like {
-  background-color: white;
+
+h4 {
+  color: black;
 }
