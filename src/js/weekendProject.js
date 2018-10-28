@@ -16,7 +16,7 @@ const $ = require('jquery');
               }
             });
           
-});*/
+});*/    
 /*var element = document.getElementById('here');
 
 
