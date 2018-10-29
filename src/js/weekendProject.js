@@ -1,5 +1,40 @@
 const $ = require('jquery');   
-//const Mustache = require('Mustache');
+const Mustache = require('Mustache');
+
+
+
+
+
+$('#here').on('click', () => {
+  $('.cookie').fadeOut();
+});
+
+$( document ).ajaxComplete(function() {
+  $('article .btn, .btn-default').on('click', event => {
+      $(event.currentTarget).toggleClass("btn-success");
+  });
+});
+
+
+$(document).ready(function(){
+  $.ajax({
+    type: 'GET',
+    url: '/articoli',
+    dataType: 'json',
+    success: function (chiamata) {
+      var template = $('#template').html();
+      console.log(template);
+      var rendered = Mustache.render(template, chiamata);
+      console.log(rendered);
+      $('#articoli').html(rendered);
+  },
+  error: function (chiamataFallita) {
+    alert("Chiamata fallita");
+  }
+});
+
+});
+
 
 
 /*$(document).ready(function(){
@@ -33,9 +68,9 @@ element.addEventListener("click",closeCookie);*/
 
 
 
-$('#here').on('click', () => {
+/*$('#here').on('click', () => {
   $('#cookie_d').hide(); 
-});
+});*/
 
 
 /*
@@ -67,7 +102,7 @@ for (var i = 0; i <like.length;  i++) {
      });
    }	*/
 
-$('.btn-light').on('click', event =>{
+/*$('.btn-light').on('click', event =>{
   $(event.currentTarget).toggleClass('btn-light2');
 });
 
@@ -78,7 +113,7 @@ $('.btn-light').on('click', event =>{
         $('button').toggleClass('green-like');
     });
 });
-
+/*
 /*
    $('.like').on('click', event => {
      $(event.currentTarget).toggleClass("green-like");
@@ -125,7 +160,7 @@ $(selector).toggleClass('like',myFunction(index,currentclass),switch*/
 };*/
 
 
-
+/*
 $.ajax({
   url: 'data.json',
   method: "GET",
@@ -158,3 +193,4 @@ $.ajax({
     console.log('error');
   }
 });
+*/
