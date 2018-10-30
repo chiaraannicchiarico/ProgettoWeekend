@@ -11056,35 +11056,58 @@ const Mustache = require('Mustache');
 
 
 
-$('#here').on('click', () => {
+$( document ).ready(function() {
+
+ $('#here').on('click', () => {
   $('.cookie').fadeOut();
+});
+
+  doAjax();
 });
 
 $( document ).ajaxComplete(function() {
   $('article .btn, .btn-default').on('click', event => {
       $(event.currentTarget).toggleClass("btn-success");
+      console.log(event.currentTarget);
+
+      //$.ajax({
+      //  url: '/article/',
+      //  method: 'GET',
+      //  dataType: "json",
+      //  success: function(result)
   });
 });
 
 
-$(document).ready(function(){
+function doAjax(){
   $.ajax({
-    type: 'GET',
     url: '/articoli',
-    dataType: 'json',
-    success: function (chiamata) {
+    method: 'GET',
+    dataType: "json",
+    success: function(result) {
+      //  $.each(result, function(key, value) {
       var template = $('#template').html();
-      console.log(template);
-      var rendered = Mustache.render(template, chiamata);
-      console.log(rendered);
-      $('#articoli').html(rendered);
-  },
-  error: function (chiamataFallita) {
-    alert("Chiamata fallita");
-  }
-});
+      //console.log(template);
+      var rendered = Mustache.render(template, result);
+      //console.log('il renderizzato:');
+      //    console.log(rendered);
+      $('#articolo').html(rendered);
+    },
+    error: function(error){
+      console.log("Errore insuccesso chiamata:");
+      console.log(error);
+    }
+  });
+};
 
-});
+
+
+
+
+
+
+
+
 
 
 
@@ -11107,24 +11130,6 @@ $(document).ready(function(){
 
 
 
-function closeCookie () {
-
-document.getElementById('cookie_d').style.display="none"; 
-};
-
-element.addEventListener("click",closeCookie);*/
-
-
-
-
-
-
-/*$('#here').on('click', () => {
-  $('#cookie_d').hide(); 
-});*/
-
-
-/*
 
 JavaScript:  modificare il colore del like al click del mouse
 for (var i = 0; i <like.length;  i++) {
@@ -11184,35 +11189,9 @@ $(selector).toggleClass('like',myFunction(index,currentclass),switch*/
 });*/
 
 
-/*function doAjax(){
-  $.ajax({
-    url: 'data.json',
-    method: 'GET',
-    dataType: "json",
-    success: function(result) {
-      
-      var template = $('#template').html();
-      console.log(template);
-      var rendered = Mustache.render(template, result);
-      console.log('il renderizzato:');
-        console.log(rendered);
-      $('#articolo').html(rendered);
-    },
-    error: function(error){
-      console.log("Errore insuccesso chiamata:");
-      console.log(error);
-    },
-    complete: function() {
-      $('.btn, .btn-default').on('click', event => {
-          $(event.currentTarget).toggleClass("btn-success");
-      });
-    }
-  });
-};*/
 
 
-/*
-$.ajax({
+/* $.ajax({
   url: 'data.json',
   method: "GET",
   success: function(result){

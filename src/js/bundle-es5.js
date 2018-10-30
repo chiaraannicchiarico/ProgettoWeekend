@@ -10592,33 +10592,48 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		var $ = require('jquery');
 		var Mustache = require('Mustache');
 
-		$('#here').on('click', function () {
-			$('.cookie').fadeOut();
+		$(document).ready(function () {
+
+			$('#here').on('click', function () {
+				$('.cookie').fadeOut();
+			});
+
+			doAjax();
 		});
 
 		$(document).ajaxComplete(function () {
 			$('article .btn, .btn-default').on('click', function (event) {
 				$(event.currentTarget).toggleClass("btn-success");
+				console.log(event.currentTarget);
+
+				//$.ajax({
+				//  url: '/article/',
+				//  method: 'GET',
+				//  dataType: "json",
+				//  success: function(result)
 			});
 		});
 
-		$(document).ready(function () {
+		function doAjax() {
 			$.ajax({
-				type: 'GET',
 				url: '/articoli',
-				dataType: 'json',
-				success: function success(chiamata) {
+				method: 'GET',
+				dataType: "json",
+				success: function success(result) {
+					//  $.each(result, function(key, value) {
 					var template = $('#template').html();
-					console.log(template);
-					var rendered = Mustache.render(template, chiamata);
-					console.log(rendered);
-					$('#articoli').html(rendered);
+					//console.log(template);
+					var rendered = Mustache.render(template, result);
+					//console.log('il renderizzato:');
+					//    console.log(rendered);
+					$('#articolo').html(rendered);
 				},
-				error: function error(chiamataFallita) {
-					alert("Chiamata fallita");
+				error: function error(_error) {
+					console.log("Errore insuccesso chiamata:");
+					console.log(_error);
 				}
 			});
-		});
+		};
 
 		/*$(document).ready(function(){
               $.ajax ({
@@ -10639,18 +10654,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   
   
   
-  function closeCookie () {
-  
-  document.getElementById('cookie_d').style.display="none"; 
-  };
-  
-  element.addEventListener("click",closeCookie);*/
-
-		/*$('#here').on('click', () => {
-    $('#cookie_d').hide(); 
-  });*/
-
-		/*
   
   JavaScript:  modificare il colore del like al click del mouse
   for (var i = 0; i <like.length;  i++) {
@@ -10706,34 +10709,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     $(".like").toggleClass("green-like");
   });*/
 
-		/*function doAjax(){
-    $.ajax({
-      url: 'data.json',
-      method: 'GET',
-      dataType: "json",
-      success: function(result) {
-        
-        var template = $('#template').html();
-        console.log(template);
-        var rendered = Mustache.render(template, result);
-        console.log('il renderizzato:');
-          console.log(rendered);
-        $('#articolo').html(rendered);
-      },
-      error: function(error){
-        console.log("Errore insuccesso chiamata:");
-        console.log(error);
-      },
-      complete: function() {
-        $('.btn, .btn-default').on('click', event => {
-            $(event.currentTarget).toggleClass("btn-success");
-        });
-      }
-    });
-  };*/
-
-		/*
-  $.ajax({
+		/* $.ajax({
     url: 'data.json',
     method: "GET",
     success: function(result){
